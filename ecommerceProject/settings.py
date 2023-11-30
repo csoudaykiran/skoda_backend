@@ -151,6 +151,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
+    'https://skoda_backend.com'
 ] 
 import os
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
