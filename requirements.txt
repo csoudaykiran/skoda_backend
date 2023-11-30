@@ -127,8 +127,7 @@ kaleido==0.2.1
 keras==2.11.0
 Kivy==2.1.0
 
-kivy-deps.glew==0.3.1
-kivy-deps.sdl2==0.4.5
+
 Kivy-Garden==0.1.5
 kiwisolver==1.1.0
 libclang==15.0.6.1
