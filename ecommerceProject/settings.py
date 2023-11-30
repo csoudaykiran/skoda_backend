@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-%te6!$^n!@3sk-8g1jkpov!a%!65_errr&(zjycoc06x*fr@)j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.vercel.app','now.sh','127.0.0.1','localhost']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -84,17 +84,20 @@ WSGI_APPLICATION = 'ecommerceProject.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'Abc1adcAbe42cG63gCBBcCAG6DdB5-D*',
-        'HOST': 'roundhouse.proxy.rlwy.net',
-        'PORT': '48273',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'railway',
+#         'USER': 'postgres',
+#         'PASSWORD': 'Abc1adcAbe42cG63gCBBcCAG6DdB5-D*',
+#         'HOST': 'roundhouse.proxy.rlwy.net',
+#         'PORT': '48273',
+#     }
+# }
 
+DATABASE_URL = "postgres://testdb_xgke_user:npmrHHtybrADsIjxf024JtvgaCXgceXj@dpg-clk8ibd8td7s73dd8u30-a.oregon-postgres.render.com/testdb_xgke"
+
+DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -132,6 +135,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_URL = 'images/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
